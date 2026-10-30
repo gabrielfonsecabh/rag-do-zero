@@ -1,0 +1,28 @@
+{
+  "name": "rag-do-zero-app",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "description": "RAG em TypeScript: indexa documentos no Postgres com pgvector e responde perguntas por CLI ou HTTP.",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "indexar": "tsx src/cli/indexar.ts",
+    "perguntar": "tsx src/cli/perguntar.ts",
+    "avaliar": "tsx src/cli/avaliar.ts",
+    "servidor": "tsx src/servidor.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^3.7.0",
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/pg": "^8.11.10",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}
